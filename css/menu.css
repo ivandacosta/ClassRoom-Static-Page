@@ -1,0 +1,380 @@
+body.hidden {
+    overflow: hidden;
+  }
+  
+  #header {
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: transparent;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #header:after {
+    content: "";
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0));
+  }
+  #header > input {
+    display: none;
+  }
+  #header > label[for=burguer-menu] {
+    height: 100%;
+    width: 70px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #header > label[for=burguer-menu] span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    position: relative;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  #header > label[for=burguer-menu] span:before, #header > label[for=burguer-menu] span:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #cae807;
+    transition: top 0.15s ease-in-out 0.12s, transform 0.12s ease-in-out;
+  }
+  #header > label[for=burguer-menu] span:before {
+    top: -7px;
+  }
+  #header > label[for=burguer-menu] span:after {
+    top: 7px;
+    width: 23px;
+    right: 0;
+  }
+  #header > label[for=burguer-menu] span:last-child {
+    margin: 0;
+  }
+  #header .container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  #header nav {
+    position: fixed;
+    height: calc(100vh - 60px);
+    width: 100vw;
+    right: 0;
+    top: 60px;
+    visibility: hidden;
+  }
+  #header nav .menu {
+    height: 100%;
+    width: 100%;
+    right: -100%;
+    position: fixed;
+    background: #cae807;
+    transition: all 0.5s ease-in-out;
+}
+#header nav .menu > a {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 35px;
+    color: #000;
+    font-family: "MORGANITE";
+    z-index: 1;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    text-decoration: none;
+  }
+  #header input#burguer-menu:checked ~ label[for=burguer-menu] span {
+    background: rgba(255, 255, 255, 0);
+  }
+  #header input#burguer-menu:checked ~ label[for=burguer-menu] span:before {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: all 0.12s ease-in-out, transform 0.15s ease-in-out 0.12s, background 0.1s ease-in-out 0.12s;
+  }
+  #header input#burguer-menu:checked ~ label[for=burguer-menu] span:after {
+    top: 0;
+    width: 28px;
+    transform: rotate(45deg);
+    transition: all 0.12s ease-in-out, transform 0.15s ease-in-out 0.12s, background 0.1s ease-in-out 0.12s;
+  }
+  #header input#burguer-menu:checked ~ .container > nav {
+    visibility: visible;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .bg {
+    opacity: 1;
+    visibility: visible;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu {
+    right: 0;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(1) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 0.1s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 0.1s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(2) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 0.2s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 0.2s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(3) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 0.3s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 0.3s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(4) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 0.4s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 0.4s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(5) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 0.5s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 0.5s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(6) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 0.6s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 0.6s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(7) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 0.7s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 0.7s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(8) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 0.8s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 0.8s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(9) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 0.9s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 0.9s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(10) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(11) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1.1s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1.1s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(12) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1.2s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1.2s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(13) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1.3s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1.3s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(14) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1.4s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1.4s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(15) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1.5s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1.5s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(16) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1.6s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1.6s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(17) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1.7s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1.7s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(18) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1.8s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1.8s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(19) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 1.9s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 1.9s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .menu a:nth-child(20) {
+    -webkit-animation: entrada-esquerda-menu 0.3s ease-in-out 2s forwards;
+            animation: entrada-esquerda-menu 0.3s ease-in-out 2s forwards;
+  }
+  #header input#burguer-menu:checked ~ .container > nav .social-menu {
+    right: 0;
+  }
+  #header .logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #header .logo a {
+    width: auto;
+    height: auto;
+  }
+  #header .logo a svg {
+    height: 40px;
+    width: auto;
+  }
+  @media screen and (min-width: 1024px) {
+    #header {
+      transition: all 0.1s linear;
+      height: 90px;
+      justify-content: flex-end;
+      background: transparent;
+      position: relative;
+    }
+    #header:after {
+      top: 90px;
+      transition: all 0.1s linear;
+      position: absolute;
+    }
+    #header > label[for=burguer-menu] {
+      display: none;
+    }
+    #header .container {
+      justify-content: space-between;
+    }
+    #header .logo {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      padding-left: 0;
+    }
+    #header .logo a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #header .logo a svg {
+      height: 56px;
+      width: auto;
+      transition: all 0.2s ease-in-out;
+    }
+    #header nav {
+      position: relative;
+      visibility: visible;
+      height: 100%;
+      width: auto;
+      opacity: 1;
+      left: 0;
+      top: 0;
+      transition: all 0.6s ease;
+      padding: 0;
+    }
+    #header nav .menu {
+      background: rgba(255, 255, 255, 0);
+      display: flex;
+      align-items: center;
+      position: static;
+      padding: 0;
+      width: auto;
+      transition: all 0.6s ease;
+      font-family: "MORGANITE";
+      font-size: 50px;
+    }
+    #header nav .menu:before {
+      display: none;
+    }
+    #header nav .menu a {
+      margin-right: 20px;
+      text-transform: uppercase;
+      min-width: 60px;
+      opacity: 1;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      white-space: nowrap;
+      width: auto;
+      transition: all 0.3s linear;
+      height: 100%;
+      position: relative;
+      padding: 0 25px;
+      box-sizing: border-box;
+      margin: 0;
+      z-index: 1;
+      color: #fff;
+    }
+    #header nav .menu a:hover, #header nav .menu a.active {
+      color: #cae807;
+    }
+    #header.on {
+      height: 60px;
+      position: fixed;
+      z-index: 3;
+    }
+    #header.on .logo a svg {
+      height: 46px;
+      width: auto;
+    }
+    #header.on nav .menu a {
+      font-size: 14px;
+    }
+    #header.on::after {
+      top: 60px;
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    #header.on {
+      height: 77px;
+    }
+    #header.on::after {
+      top: 77px;
+    }
+  }
+  
+  @-webkit-keyframes entrada-esquerda-menu {
+    from {
+      text-indent: -50px;
+    }
+    to {
+      opacity: 1;
+      text-indent: 0;
+    }
+  }
+  
+  @keyframes entrada-esquerda-menu {
+    from {
+      text-indent: -50px;
+    }
+    to {
+      opacity: 1;
+      text-indent: 0;
+    }
+  }
+  
+  .logo a{
+    text-decoration: none;
+  }
+  .logo a h3{
+    color: #CAE807;
+    font-size: 50px;
+    font-family: "MORGANITE";
+    letter-spacing: 3px;
+    
+  }
+
+@font-face {
+    font-family: "MORGANITE";
+    src: url("../fonts/Morganite-Medium.ttf");
+}

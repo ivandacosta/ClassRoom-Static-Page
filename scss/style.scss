@@ -1,0 +1,140 @@
+body,
+html {
+  background-color: #000;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "MORGANITE";
+  src: url("../fonts/Morganite-Medium.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.plataforma {
+  background-color: #cae807;
+  color: #000;
+  border-radius: 7px;
+}
+
+.container-aprende {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  a {
+    text-decoration: none;
+  }
+  .aprende {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    max-width: 500px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0px 10px 0px 10px #cae807;
+    transition: all 0.5s;
+  }
+
+  .aprende:hover {
+    box-shadow: 10px 10px 10px 2px #cae807;
+  }
+  #aprende-color {
+    color: #cae807;
+  }
+}
+
+#cursos {
+  font-family: "Poppins", sans-serif;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+
+  #curso-title {
+    font-size: 30px;
+  }
+
+  .container-items {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .items {
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(25, 25, 25);
+    width: 280px;
+    height: 450px;
+    border-radius: 7px;
+
+    #img-item {
+      margin-top: 100px;
+      width: 200px;
+      border-radius: 7px;
+    }
+    #img-effect {
+      width: 70px;
+      border: 4px solid #16151a;
+      border-radius: 50%;
+      position: absolute;
+      margin-bottom: 80px;
+      transition: all 0.5s;
+    }
+    #img-effect:hover {
+      box-shadow: 2px 5px 5px 2px #cae807;
+    }
+  }
+  .items-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 90px;
+    font-family: "Poppins", sans-serif;
+    color: #cae807;
+    width: 250px;
+  }
+  .items-flex {
+    display: flex;
+    gap: 100px;
+
+    .buy {
+      border: 2px solid #cae807;
+      border-radius: 7px;
+      width: 100px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+}
+footer {
+  background-color: rgb(25, 25, 25);
+}
+.footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #cae807;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  .fo-github {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 100px;
+  }
+}
